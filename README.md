@@ -1,7 +1,7 @@
 Sync [ActualBudget](https://actualbudget.com/) via [SimpleFIN](https://beta-bridge.simplefin.org/)
 ## PREREQUISITES
   - A [SimpleFIN Token](https://beta-bridge.simplefin.org/) is required during **setup**
-  - The [ActualBduget Budget ID](https://actualbudget.com/docs/developers/using-the-API/#getting-started) is required during **setup**
+  - The [ActualBudget Budget ID](https://actualbudget.com/docs/developers/using-the-API/#getting-started) is required during **setup**
   - ActualBudget needs to be installed and running
   - Have your SimpleFin setup key handy. These are 1 time use only, so if for some reason you abort your setup early, you may need to generate a new one. If you re-run config, after a succesful setup, you won't need to change this unless you've deleted it from SimpleFin (stores the AccessKey returned).
   - Once you get everything running, you may (optionally) configure a system cron to run this automatically.
@@ -17,23 +17,23 @@ Sync [ActualBudget](https://actualbudget.com/) via [SimpleFIN](https://beta-brid
 ## TODO
  - Better security for storage of SimpleFIN AccessKey
  - Allow custom date ranges for sync
- 
+
 ## USAGE
-  - **Sync** - If the app hasn't been configured yet, you'll be run through the setup steps, otherwise it will sync the current month for all accounts. 
+  - **Sync** - If the app hasn't been configured yet, you'll be run through the setup steps, otherwise it will sync the current month for all accounts.
     ```
     node app.js
     ```
 
-  - **Setup** - Change your SimpleFIN token, which budget file to use, your Actual Budget url, Actual Budget Password,and how the accounts are linked. 
+  - **Setup** - Change your SimpleFIN token, which budget file to use, your Actual Budget url, Actual Budget Password,and how the accounts are linked.
     ```
     node app.js --setup
     ```
 
-  - **Link** - Change or add any new linked accounts 
+  - **Link** - Change or add any new linked accounts
     ```
     node app.js --link
     ```
-    
+
 ## TROUBLESHOOTING
 
 - I've had some users report trouble using .local addresses to connect. If you run into this and are able, a reverse proxy might be of assistance.
